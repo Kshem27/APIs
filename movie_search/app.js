@@ -1,5 +1,5 @@
 const express = require('express');
-var app = express();
+const app = express();
 const rp = require('request-promise');
 const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
