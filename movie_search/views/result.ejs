@@ -1,6 +1,9 @@
-<h5>Title: <%=data.Title%></h5>
-<h5>Genre: <%=data.Genre%></h5>
-<h5>Director: <%=data.Director%></h5>
-<h5>Released: <%=data.Released%></h5>
-<h5>Rated: <%=data.Rated%></h5>
-<h5>IMDB Rating: <%=data.imdbRating%></h5>
+<h1>Total Results :: <%=allData.totalResults%></h1>
+<%allData.Search.forEach((data)=>{%>
+    <h5>Title: <%=data.Title%></h5>
+    <h5>Type: <%=data.Type%></h5>
+    <!-- <h5>Poster: <a href="<%=data.Poster%>" target="_blank">Click here</a></h5> -->
+    <img src="<%=data.Poster%>" alt="<%=data.Title%>">
+    <h5>Released: <%=data.Year%></h5>
+    <h5>IMDB Id: <%=data.imdbID%></h5>
+<%})%>
