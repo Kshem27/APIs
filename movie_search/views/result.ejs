@@ -1,9 +1,17 @@
+<%-include("partials/header") %>
 <h1>Total Results :: <%=allData.totalResults%></h1>
+<div class="row">
 <%allData.Search.forEach((data)=>{%>
-    <h5>Title: <%=data.Title%></h5>
-    <h5>Type: <%=data.Type%></h5>
-    <!-- <h5>Poster: <a href="<%=data.Poster%>" target="_blank">Click here</a></h5> -->
-    <img src="<%=data.Poster%>" alt="<%=data.Title%>">
-    <h5>Released: <%=data.Year%></h5>
-    <h5>IMDB Id: <%=data.imdbID%></h5>
+    <div class="col-md-3">
+        <div class="card">
+            <img src="<%=data.Poster%>" alt="<%=data.Title%>">
+            <div class="card-body">
+            <h5 class="card-title">Title: <%=data.Title%></h5>
+            <p class="card-text">Type: <%=data.Type.toUpperCase()%></p>
+            <p class="card-text">Released: <%=data.Year%></p>
+            <a href="https://www.imdb.com/title/<%=data.imdbID%>/" class="btn btn-primary">Read More</a>
+        </div>
+        </div>
+</div>
 <%})%>
+<%-include("partials/footer") %>
