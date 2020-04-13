@@ -1,6 +1,15 @@
 <%-include("partials/header") %>
 <form action="/results" method="GET">
-<input type="text" name="s" placeholder="Movie Name">
-<input type="submit">
+    <div class="form-group row align-items-center justify-content-center">
+        <div class="col-md-1">
+            <label>Movie::</label>
+        </div>
+        <div class="col-md-10">
+            <input class = "form-control" type="text" name="s" placeholder="Movie Name">
+        </div>
+        <div class="col-md-1">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </div>
 </form>
 <%-include("partials/footer")%>
