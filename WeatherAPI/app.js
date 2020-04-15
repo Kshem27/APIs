@@ -4,7 +4,7 @@ var app = express();
 var PORT = 3000 || process.env.PORT;
 app.set('view engine', 'ejs');
 app.get('/results', (req, res) => {
-	rp('https://api.openweathermap.org/data/2.5/weather?q=delhi&units=metric&appid=83357010e805049f8a9d009658c7c1f0')
+	rp('https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=83357010e805049f8a9d009658c7c1f0')
 		.then((body) => {
 			var parsedData = JSON.parse(body);
 			//eval(require('locus'));
